@@ -373,7 +373,6 @@ body {
         right: 10px; }
       .main .pages .remember-me-box .fp-container .fp-clock, .main .pages .remember-me-box .fp-container .fp-calendar {
         position: absolute;
-        bottom: -233px;
         z-index: 9;
         right: 79px; }
       .main .pages .remember-me-box .fp-container .fp-calendar {
