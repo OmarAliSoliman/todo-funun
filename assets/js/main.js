@@ -34,6 +34,9 @@ $(document).ready(function () {
       "font-size: 15px; font-family: 'Tajawal', sans-serif;";
     fbCalender.style.cssText =
       "font-size: 15px; font-family: 'Tajawal', sans-serif;";
+      $(fbClock).on('click', function(){
+        $(this).focus();
+      })
   });
   $fp.on("fp:save", function (e, dateObj) {
     $fp.val(dateObj.format("MMM DD YYYY hh:mm A"));

@@ -547,18 +547,18 @@ body {
       }
       .fp-container{
         right: -8% !important;
-        padding-bottom: 40px;
+        padding-bottom: 30px;
         .fp-cal-nav{
           margin-top: -30px;
         }
         .fp-save {
-          position: absolute;
-          bottom: -229px;
+          // position: absolute;
+          // bottom: -229px;
           z-index: 9;
           right: 10px;
         }
         .fp-clock, .fp-calendar {
-          position: absolute;
+          // position: absolute;
           // bottom: -233px;
           z-index: 9;
           right: 79px;

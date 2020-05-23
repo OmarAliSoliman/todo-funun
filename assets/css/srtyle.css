@@ -363,16 +363,13 @@ body {
         font-size: 13px; }
     .main .pages .remember-me-box .fp-container {
       right: -8% !important;
-      padding-bottom: 40px; }
+      padding-bottom: 30px; }
       .main .pages .remember-me-box .fp-container .fp-cal-nav {
         margin-top: -30px; }
       .main .pages .remember-me-box .fp-container .fp-save {
-        position: absolute;
-        bottom: -229px;
         z-index: 9;
         right: 10px; }
       .main .pages .remember-me-box .fp-container .fp-clock, .main .pages .remember-me-box .fp-container .fp-calendar {
-        position: absolute;
         z-index: 9;
         right: 79px; }
       .main .pages .remember-me-box .fp-container .fp-calendar {
