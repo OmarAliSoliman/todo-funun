@@ -1,0 +1,541 @@
+@import "https://fonts.googleapis.com/css2?family=Tajawal&display=swap";
+body {
+  direction: rtl;
+  font-family: "Tajawal", sans-serif; }
+
+.clear {
+  clear: both; }
+
+.main .row {
+  margin: 0 !important;
+  padding: 0 !important; }
+  .main .row .col-lg-3,
+  .main .row .col-lg-6 {
+    padding: 0 !important; }
+.main .tasks {
+  background-color: #fcfcfe;
+  padding-top: 18px;
+  height: 100%; }
+  .main .tasks .search .head {
+    font-size: 15px; }
+    .main .tasks .search .head i {
+      margin-right: 10px;
+      font-size: 13px; }
+  .main .tasks .search .name {
+    position: relative;
+    padding-right: 10px;
+    font-size: 14px; }
+    .main .tasks .search .name::before {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 30%;
+      width: 8px;
+      height: 8px;
+      background-color: #e8912d;
+      border-radius: 50%; }
+  .main .tasks .search form input {
+    width: 100%;
+    border-radius: 10px;
+    height: 40px;
+    border: 1px solid #acacac;
+    outline: 0 !important;
+    padding: 5px; }
+    .main .tasks .search form input::placeholder {
+      font-size: 14px;
+      position: relative; }
+  .main .tasks .search ul {
+    margin-top: 10px; }
+    .main .tasks .search ul .task-li img {
+      margin-left: 5px; }
+    .main .tasks .search ul .task-li:hover {
+      background-color: #f6f6f6; }
+    .main .tasks .search ul .task-li .task-number {
+      position: absolute;
+      left: 5%; }
+  .main .tasks .tasks-list ul .list-task-li img {
+    margin-left: 5px; }
+  .main .tasks .tasks-list ul .list-task-li:hover {
+    background-color: #f6f6f6; }
+  .main .tasks .tasks-list ul .list-task-li .list-task-number {
+    position: absolute;
+    left: 5%; }
+  .main .tasks .layers {
+    margin-top: 20px; }
+    .main .tasks .layers ul .rate-li:hover {
+      background-color: #f6f6f6; }
+    .main .tasks .layers ul .rate-li img {
+      margin-left: 5px; }
+  .main .tasks .add-list-box {
+    position: absolute;
+    padding-top: 0 !important;
+    display: none;
+    z-index: 99;
+    border-radius: 0 !important;
+    right: 10%;
+    background-color: #fff !important;
+    border: 1px solid #f7f8fd;
+    width: 85%; }
+    .main .tasks .add-list-box .head-choses {
+      font-size: 14px; }
+    .main .tasks .add-list-box form input {
+      width: 100%;
+      border: 1px solid #d9d9d9;
+      border-radius: 10px;
+      padding: 5px; }
+      .main .tasks .add-list-box form input::placeholder {
+        font-size: 14px; }
+      .main .tasks .add-list-box form input:focus {
+        outline: 0 !important; }
+    .main .tasks .add-list-box form button {
+      width: 50%;
+      margin-top: 10px;
+      background-color: #7387d9;
+      border: 1px solid #7387d9;
+      color: #fff; }
+.main .add-task {
+  padding-top: 18px; }
+  .main .add-task #choses {
+    cursor: pointer; }
+  .main .add-task .choses-box {
+    position: absolute;
+    display: none;
+    z-index: 99;
+    top: 25%;
+    right: 15%;
+    background-color: #fff !important;
+    border: 1px solid #f7f8fd;
+    width: 35%; }
+    .main .add-task .choses-box ul li {
+      margin-top: 6px; }
+      .main .add-task .choses-box ul li i {
+        color: #7387d9; }
+      .main .add-task .choses-box ul li a {
+        color: #000 !important;
+        text-decoration: none;
+        font-size: 13px; }
+    .main .add-task .choses-box .head-choses {
+      font-size: 14px; }
+    .main .add-task .choses-box .trash {
+      color: red; }
+  .main .add-task #filter-icon {
+    cursor: pointer; }
+  .main .add-task .filter-by {
+    position: absolute;
+    display: none;
+    z-index: 99;
+    top: 35%;
+    left: 5%;
+    background-color: #fff !important;
+    border: 1px solid #f7f8fd;
+    width: 40%; }
+    .main .add-task .filter-by .head-choses {
+      font-size: 14px; }
+    .main .add-task .filter-by ul li {
+      margin-top: 10px; }
+      .main .add-task .filter-by ul li a {
+        font-size: 13px;
+        color: #000 !important;
+        text-decoration: none;
+        margin-right: 10px; }
+  .main .add-task .header {
+    position: relative;
+    border-bottom: 1px solid #d9d9d9;
+    padding-bottom: 15px; }
+    .main .add-task .header .name {
+      color: #7387d9;
+      font-weight: bold;
+      font-size: 20px; }
+      .main .add-task .header .name i {
+        color: #d9d9d9;
+        margin-right: 10px; }
+    .main .add-task .header .notification {
+      position: absolute;
+      top: 0;
+      left: 4%; }
+      .main .add-task .header .notification .bell .bell-number {
+        position: absolute;
+        top: -10%;
+        right: -10%;
+        font-size: 12px;
+        background-color: #7387d9;
+        color: #fff;
+        width: 15px;
+        height: 15px;
+        line-height: 15px;
+        text-align: center;
+        border-radius: 50%; }
+    .main .add-task .header .add-new-task {
+      margin-top: 10px; }
+      .main .add-task .header .add-new-task a span {
+        font-size: 14px; }
+  .main .add-task .the-tasks {
+    margin-top: 30px;
+    padding: 0px 5px; }
+    .main .add-task .the-tasks ul .list-tasks {
+      position: relative;
+      margin-top: 10px; }
+      .main .add-task .the-tasks ul .list-tasks:hover {
+        background-color: #f6f6f6;
+        border-radius: 7px; }
+      .main .add-task .the-tasks ul .list-tasks .task-label {
+        font-size: 14px; }
+      .main .add-task .the-tasks ul .list-tasks p {
+        margin: 0;
+        margin-right: 10px; }
+        .main .add-task .the-tasks ul .list-tasks p .file-num {
+          color: #acacac;
+          font-size: 10px;
+          margin-right: 5px; }
+      .main .add-task .the-tasks ul .list-tasks .image-blue-star {
+        position: absolute;
+        top: 20%;
+        left: 5%; }
+    .main .add-task .the-tasks .container {
+      display: block;
+      position: relative;
+      padding-left: 35px;
+      margin-bottom: 12px;
+      cursor: pointer;
+      font-size: 22px;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none; }
+      .main .add-task .the-tasks .container input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0; }
+      .main .add-task .the-tasks .container .checkmark {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 25px;
+        margin-top: 6px;
+        width: 25px;
+        border-radius: 50%;
+        background-color: #eee; }
+        .main .add-task .the-tasks .container .checkmark::after {
+          content: "";
+          position: absolute;
+          display: none; }
+      .main .add-task .the-tasks .container .task-label {
+        margin-right: 20px; }
+    .main .add-task .the-tasks .container:hover input ~ .checkmark {
+      background-color: #ccc; }
+    .main .add-task .the-tasks .container input:checked ~ .checkmark {
+      background-color: #2196f3; }
+    .main .add-task .the-tasks .container input:checked ~ .checkmark:after {
+      display: block; }
+    .main .add-task .the-tasks .container .checkmark:after {
+      left: 9px;
+      top: 5px;
+      width: 5px;
+      height: 10px;
+      border: solid white;
+      border-width: 0 3px 3px 0;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg); }
+    .main .add-task .the-tasks .line-through {
+      text-decoration: line-through; }
+    .main .add-task .the-tasks .list-end-task {
+      border-bottom: 1px solid #d9d9d9; }
+    .main .add-task .the-tasks .container .checkmark:after {
+      top: 4px !important;
+      width: 8px !important;
+      height: 14px !important; }
+.main .pages {
+  background-color: #fcfcfe;
+  padding-top: 10px; }
+  .main .pages .page-type {
+    position: relative; }
+    .main .pages .page-type ul {
+      margin-top: 20px; }
+    .main .pages .page-type .str_page_type {
+      position: absolute;
+      top: 10%;
+      left: 5%; }
+    .main .pages .page-type .li_for_page_type {
+      position: relative;
+      border-bottom: 1px solid #d9d9d9;
+      margin-top: 10px; }
+      .main .pages .page-type .li_for_page_type .fa-times {
+        position: absolute;
+        left: 2%;
+        top: 30%;
+        color: #acacac; }
+      .main .pages .page-type .li_for_page_type .task-label {
+        font-size: 14px;
+        color: #999; }
+      .main .pages .page-type .li_for_page_type .container {
+        display: block;
+        position: relative;
+        padding-left: 35px;
+        margin-bottom: 12px;
+        cursor: pointer;
+        font-size: 22px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none; }
+        .main .pages .page-type .li_for_page_type .container input {
+          position: absolute;
+          opacity: 0;
+          cursor: pointer;
+          height: 0;
+          width: 0; }
+        .main .pages .page-type .li_for_page_type .container .checkmark {
+          position: absolute;
+          top: 0;
+          right: 0;
+          height: 25px;
+          margin-top: 6px;
+          width: 25px;
+          border-radius: 50%;
+          background-color: #eee; }
+          .main .pages .page-type .li_for_page_type .container .checkmark::after {
+            content: "";
+            position: absolute;
+            display: none; }
+        .main .pages .page-type .li_for_page_type .container .task-label {
+          margin-right: 20px; }
+      .main .pages .page-type .li_for_page_type .container:hover input ~ .checkmark {
+        background-color: #ccc; }
+      .main .pages .page-type .li_for_page_type .container input:checked ~ .checkmark {
+        background-color: #2196f3; }
+      .main .pages .page-type .li_for_page_type .container input:checked ~ .checkmark:after {
+        display: block; }
+      .main .pages .page-type .li_for_page_type .container .checkmark:after {
+        left: 9px;
+        top: 5px;
+        width: 5px;
+        height: 10px;
+        border: solid white;
+        border-width: 0 3px 3px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg); }
+      .main .pages .page-type .li_for_page_type .container .checkmark:after {
+        top: 4px !important;
+        width: 8px !important;
+        height: 14px !important; }
+  .main .pages .remember-me {
+    margin-top: 10px;
+    padding-bottom: 0 !important; }
+    .main .pages .remember-me ul li {
+      margin-top: 10px;
+      border-bottom: 1px solid #d9d9d9;
+      padding-bottom: 10px; }
+      .main .pages .remember-me ul li a {
+        text-decoration: none; }
+      .main .pages .remember-me ul li img {
+        margin-left: 5px; }
+      .main .pages .remember-me ul li span {
+        color: #9b9b9b;
+        font-size: 14px; }
+    .main .pages .remember-me ul li:last-of-type {
+      border-bottom: 0; }
+  .main .pages .remember-me-box {
+    position: absolute;
+    width: 85% !important;
+    padding-top: 0 !important;
+    border-radius: 0 !important;
+    display: none;
+    right: 10%;
+    top: 30%; }
+    .main .pages .remember-me-box ul li {
+      margin-top: 10px;
+      border-bottom: 1px solid #f1f3fb;
+      padding-bottom: 10px; }
+      .main .pages .remember-me-box ul li a {
+        color: #000;
+        font-size: 14px;
+        text-decoration: none; }
+      .main .pages .remember-me-box ul li img {
+        margin-left: 5px; }
+      .main .pages .remember-me-box ul li .date {
+        position: absolute;
+        left: 4%;
+        color: #858585;
+        font-size: 13px; }
+    .main .pages .remember-me-box .fp-container {
+      right: -8% !important;
+      padding-bottom: 40px; }
+      .main .pages .remember-me-box .fp-container .fp-cal-nav {
+        margin-top: -30px; }
+      .main .pages .remember-me-box .fp-container .fp-save {
+        position: absolute;
+        bottom: -229px;
+        z-index: 9;
+        right: 10px; }
+      .main .pages .remember-me-box .fp-container .fp-clock, .main .pages .remember-me-box .fp-container .fp-calendar {
+        position: absolute;
+        bottom: -233px;
+        z-index: 9;
+        right: 79px; }
+      .main .pages .remember-me-box .fp-container .fp-calendar {
+        text-align: left;
+        right: 183px !important; }
+      .main .pages .remember-me-box .fp-container .fp-cal-date.active, .main .pages .remember-me-box .fp-container .btn-primary {
+        background-color: #7387d9 !important; }
+    .main .pages .remember-me-box .date-time-input {
+      border: 0; }
+      .main .pages .remember-me-box .date-time-input::placeholder {
+        color: #000 !important;
+        font-size: 14px; }
+      .main .pages .remember-me-box .date-time-input:focus {
+        outline: 0 !important; }
+    .main .pages .remember-me-box .arrow-date-time {
+      position: absolute;
+      left: 5%;
+      margin-top: 10px; }
+  .main .pages .in-agent-page {
+    top: 42%; }
+  .main .pages .remember-boxes-agent {
+    position: absolute;
+    width: 75% !important;
+    padding-top: 0 !important;
+    border-radius: 0 !important;
+    display: none;
+    right: 10%;
+    top: 25%; }
+    .main .pages .remember-boxes-agent form input {
+      width: 100%;
+      border-radius: 5px;
+      height: 35px;
+      border: 1px solid #acacac;
+      outline: 0 !important;
+      padding: 5px; }
+      .main .pages .remember-boxes-agent form input::placeholder {
+        font-size: 13px;
+        position: relative; }
+    .main .pages .remember-boxes-agent form button {
+      background-color: #7387d9;
+      border: 1px solid #7387d9;
+      color: #fff;
+      margin-top: 10px;
+      border-radius: 5px;
+      width: 40%; }
+  .main .pages .phone-box {
+    top: 30% !important; }
+  .main .pages .email-box {
+    top: 33% !important; }
+  .main .pages .price-box {
+    top: 37% !important; }
+  .main .pages .link-file {
+    margin-top: 10px; }
+    .main .pages .link-file a {
+      text-decoration: none; }
+      .main .pages .link-file a span {
+        color: #9b9b9b;
+        font-size: 14px; }
+  .main .pages .add-note {
+    margin-top: 10px; }
+    .main .pages .add-note textarea {
+      width: 100%;
+      border: 0; }
+  .main .pages .comment {
+    margin-top: 10px; }
+    .main .pages .comment .single-comment {
+      position: relative;
+      margin-top: 15px;
+      border-bottom: 1px solid #f6f6f6; }
+      .main .pages .comment .single-comment img {
+        border-radius: 50%;
+        width: 20%;
+        margin-left: 0.5rem;
+        float: right; }
+      .main .pages .comment .single-comment .content {
+        font-size: 13px; }
+        .main .pages .comment .single-comment .content .content_slag {
+          color: #acacac; }
+      .main .pages .comment .single-comment .time {
+        position: absolute;
+        top: 5%;
+        left: 2%;
+        font-size: 12px;
+        color: #888; }
+      .main .pages .comment .single-comment .comment-p {
+        font-size: 14px;
+        margin-top: 10px; }
+    .main .pages .comment .add-comment {
+      margin-top: 10px; }
+      .main .pages .comment .add-comment form {
+        position: relative; }
+        .main .pages .comment .add-comment form .icon-comment {
+          position: absolute;
+          top: 15%;
+          right: 2%; }
+        .main .pages .comment .add-comment form input {
+          width: 100%;
+          background-color: #f1f3fb;
+          height: 35px;
+          border: 0;
+          border-radius: 10px;
+          color: #fff;
+          padding-right: 35px; }
+        .main .pages .comment .add-comment form button[type="submit"] {
+          position: absolute;
+          left: 7%;
+          background-color: transparent;
+          border: 0;
+          top: 8%;
+          color: #7387d9; }
+  .main .pages .log-out {
+    margin-top: 20px;
+    position: relative; }
+    .main .pages .log-out .fa-trash {
+      position: absolute;
+      left: 3% !important;
+      top: 15%;
+      color: #444; }
+    .main .pages .log-out .fa-sign-out-alt {
+      position: absolute;
+      right: 3% !important;
+      top: 15%;
+      color: #444; }
+    .main .pages .log-out p {
+      font-size: 13px; }
+
+.main .tasks .tasks-list .task_list_head, .main .tasks .layers .head-rate {
+  background-color: #7387d9;
+  text-align: center;
+  margin: 0;
+  color: #fff;
+  height: 35px;
+  line-height: 35px;
+  font-size: 14px; }
+
+.main .tasks .search ul .task-li, .main .tasks .tasks-list ul .list-task-li, .main .tasks .layers ul .rate-li {
+  margin-top: 10px;
+  position: relative;
+  padding: 5px 3px;
+  font-size: 14px; }
+
+.main .tasks .tasks-list .add-new-list a i, .main .tasks .layers .add-new-rate a i, .main .add-task .header .add-new-task a i, .main .pages .page-type .add-new-step a i {
+  border: 1px solid #7387d9;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  font-size: 13px;
+  margin-left: 5px; }
+
+.main .tasks .add-list-box, .main .pages .page-type, .main .pages .remember-me, .main .pages .remember-me-box, .main .pages .remember-boxes-agent, .main .pages .link-file, .main .pages .add-note, .main .pages .comment {
+  border: 1px solid #e8e8e8;
+  background-color: #fff;
+  border-radius: 10px;
+  padding-top: 10px;
+  padding-bottom: 15px; }
+
+.main .tasks .add-list-box .head-choses, .main .add-task .choses-box .head-choses, .main .add-task .filter-by .head-choses, .main .pages .remember-me-box .head-choses, .main .pages .remember-boxes-agent .head-choses {
+  background-color: #f7f8fd;
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #f7f8fd; }
+
+/*# sourceMappingURL=srtyle.css.map */

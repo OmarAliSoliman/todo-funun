@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/bootstrap-ar.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+  <link rel="stylesheet" href="./assets/css/jquery.filthypillow.css">
+  <link rel="stylesheet" href="./assets/css/srtyle.css">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div class="main">
+    <div>
+      <div class="row">
+        <!-- start col-1 right col funun almoslm  -->
+        <div class="col-sm-12 col-md-12 col-lg-3">
+          <div class="tasks">
+            <div class="search">
+              <div class="container">
+                <h6 class="head">فنون المسلم<i class="fas fa-chevron-down"></i></h6>
+                <p class="name">المكود عمر علي</p>
+                <form action="">
+                  <input type="text" name="" id="" placeholder="بحث ف المهام">
+                </form>
+              </div>
+              <ul class="list-unstyled">
+                <li class="task-li">
+                  <div class="container">
+                    <img src="./assets/images/sun.png" alt="">
+                    <span>مهام اليوم</span>
+                    <span class="task-number">2</span>
+                  </div>
+                </li>
+                <li class="task-li">
+                  <div class="container">
+                    <img src="./assets/images/star.png" alt="">
+                    <span> المهمة </span>
+                    <span class="task-number">1</span>
+                  </div>
+                </li>
+                <li class="task-li">
+                  <div class="container">
+                    <img src="./assets/images/calendar.png" alt="">
+                    <span> المجدوله</span>
+                    <span class="task-number">1</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="tasks-list">
+              <h6 class="task_list_head">قائمة المهام</h6>
+              <ul class="list-unstyled">
+                <li class="list-task-li">
+                  <div class="container">
+                    <img src="./assets/images/list-text.png" alt="">
+                    <span> عمر علي</span>
+                    <span class="list-task-number">5</span>
+                  </div>
+                </li>
+                <li class="list-task-li">
+                  <div class="container">
+                    <img src="./assets/images/list-text.png" alt="">
+                    <span> محمد هلال</span>
+                    <span class="list-task-number">5</span>
+                  </div>
+                </li>
+                <li class="list-task-li">
+                  <div class="container">
+                    <img src="./assets/images/list-text.png" alt="">
+                    <span> احمد علي</span>
+                    <span class="list-task-number">5</span>
+                  </div>
+                </li>
+              </ul>
+              <div class="add-new-list">
+                <div class="container">
+                  <a href="#" id="add-list-icon">
+                    <i class="fas fa-plus"></i>
+                    <span>قائمة جديده</span>
+                  </a>
+                </div>
+                <div class="add-list-box">
+                  <h6 class="head-choses">قائمة جديدة</h6>
+                  <div class="container">
+                    <form action="">
+                      <input type="text" name="" id="" placeholder="ادخل اسم القائمة">
+                      <button type="submit">اضافة</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="layers">
+              <h6 class="head-rate"> التقييمات</h6>
+              <ul class="list-unstyled">
+                <li class="rate-li">
+                  <div class="container">
+                    <img src="./assets/images/layers.png" alt="">
+                    <span> مشروع ذبائح جازان</span>
+                  </div>
+                </li>
+                <li class="rate-li">
+                  <div class="container">
+                    <img src="./assets/images/layers.png" alt="">
+                    <span> تطبيقات فزاع</span>
+                  </div>
+                </li>
+              </ul>
+              <div class="add-new-rate">
+                <div class="container">
+                  <a href="#">
+                    <i class="fas fa-plus"></i>
+                    <span> تقييم جديد</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- start col-1 right col funun almoslm  -->
+
+        <!-- start col-1 right col funun almoslm  -->
+        <div class="col-sm-12 col-md-12 col-lg-6">
+          <div class="add-task">
+            <div class="container">
+              <div class="header">
+                <h6 class="name">مشروع ذبائح جازان<i class="fas fa-ellipsis-h" id="choses"></i></h6>
+                <div class="choses-box">
+                  <h6 class="head-choses">خيارات</h6>
+                 <div class="container">
+                  <ul class="list-unstyled">
+                    <li>
+                      <i class="fas fa-print"></i>
+                      <a href="#">طباعة القائمة</a>
+                    </li>
+                    <li>
+                      <i class="fas fa-envelope"></i>
+                      <a href="#">ارسل القائمة</a>
+                    </li>
+                    <li>
+                      <i class="fas fa-trash trash"></i>
+                      <a class="trash" href="#">حذف القائمة</a>
+                    </li>
+                  </ul>
+                 </div>
+                </div>
+                <div class="add-new-task">
+                  <a href="#">
+                    <i class="fas fa-plus"></i>
+                    <span> أضف مهمة جديدة</span>
+                  </a>
+                </div>
+                <div class="notification">
+                  <span class="bell">
+                    <img src="./assets/images/bell.png" alt="">
+                    <span class="bell-number">1</span>
+                  </span>
+                  <span id="filter-icon"> <img src="./assets/images/filter.png" alt=""> </span>
+                </div>
+                <div class="filter-by">
+                  <h6 class="head-choses">فرز بواسطة</h6>
+                  <div class="container">
+                    <ul class="list-unstyled">
+                      <li>
+                        <img src="./assets/images/star-blue.png">
+                        <a href="#">المهمة</a>
+                      </li>
+                      <li>
+                        <img src="./assets/images/calendar-blue.png">
+                        <a href="#">تاريخ التسليم</a>
+                      </li>
+                      <li>
+                        <img src="./assets/images/sort.png">
+                        <a class="trash" href="#">ابجديا</a>
+                      </li>
+                      <li>
+                        <img src="./assets/images/clock.png">
+                        <a class="trash" href="#">تاريخ الانشاء</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="the-tasks">
+              <ul class="list-unstyled">
+                <li class="list-tasks">
+                  <div class="container">
+                    <label class="container">
+                      <span class="task-label">تصميم الصفحة الرئيسية</span>
+                      <p><img src="./assets/images/file.png" /><span class="file-num">3ملفات مرفقه</span></p>
+                      <input type="checkbox">
+                      <span class="checkmark"></span>
+                    </label>
+                  </div>
+                  <img class="image-blue-star" src="./assets/images/star-blue.png" alt="">
+                </li>
+                <li class="list-tasks">
+                  <div class="container">
+                    <label class="container">
+                      <span class="task-label">تصميم الصفحة الرئيسية</span>
+                      <p><img src="./assets/images/file.png" /><span class="file-num">3ملفات مرفقه</span></p>
+                      <input type="checkbox">
+                      <span class="checkmark"></span>
+                    </label>
+                  </div>
+                  <img class="image-blue-star" src="./assets/images/star-blue.png" alt="">
+                </li>
+                <li class="list-tasks">
+                  <div class="container">
+                    <label class="container">
+                      <span class="task-label">تصميم الصفحة الرئيسية</span>
+                      <p><img src="./assets/images/file.png" /><span class="file-num">3ملفات مرفقه</span></p>
+                      <input type="checkbox">
+                      <span class="checkmark"></span>
+                    </label>
+                  </div>
+                  <img class="image-blue-star" src="./assets/images/star-blue.png" alt="">
+                </li>
+              </ul>
+            </div>
+            <div class="container mt-4">
+              <hr>
+            </div>
+            <div class="the-tasks">
+              <div class="container">
+                <h6 class="head"><i class="fas fa-chevron-down"></i><span>المهام المكتمله</span></h6>
+              </div>
+              <ul class="list-unstyled">
+                <li class="list-tasks list-end-task">
+                  <div class="container">
+                    <label class="container">
+                      <span class="task-label line-through">تصميم الصفحة الرئيسية</span>
+                      <p><img src="./assets/images/file.png" /><span class="file-num">3ملفات مرفقه</span></p>
+                      <input type="checkbox" checked="checked">
+                      <span class="checkmark"></span>
+                    </label>
+                  </div>
+                  <img class="image-blue-star" src="./assets/images/star-blue.png" alt="">
+                </li>
+                <li class="list-tasks list-end-task">
+                  <div class="container">
+                    <label class="container">
+                      <span class="task-label line-through">تصميم الصفحة الرئيسية</span>
+                      <p><img src="./assets/images/file.png" /><span class="file-num">3ملفات مرفقه</span></p>
+                      <input type="checkbox" checked="checked">
+                      <span class="checkmark"></span>
+                    </label>
+                  </div>
+                  <img class="image-blue-star" src="./assets/images/star-blue.png" alt="">
+                </li>
+                <li class="list-tasks list-end-task">
+                  <div class="container">
+                    <label class="container">
+                      <span class="task-label line-through">تصميم الصفحة الرئيسية</span>
+                      <p><img src="./assets/images/file.png" /><span class="file-num">3ملفات مرفقه</span></p>
+                      <input type="checkbox" checked="checked">
+                      <span class="checkmark"></span>
+                    </label>
+                  </div>
+                  <img class="image-blue-star" src="./assets/images/star-blue.png" alt="">
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- start col-1 right col funun almoslm  -->
+
+        <!-- start col-1 right col funun almoslm  -->
+        <div class="col-sm-12 col-md-12 col-lg-3">
+          <div class="pages">
+            <div class="container">
+              <div class="page-type">
+                <div class="container">
+                  <h6>التصميم</h6>
+                  <ul class="list-unstyled">
+                    <li class="li_for_page_type">
+                      <label class="container">
+                        <span class="task-label">تصميم الشاشات</span>
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                      </label>
+                      <a href="#"><i class="fas fa-times"></i></a>
+                    </li>
+                    <li class="li_for_page_type">
+                      <label class="container">
+                        <span class="task-label"> العرض الحي</span>
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                      </label>
+                      <a href="#"><i class="fas fa-times"></i></a>
+                    </li>
+                  </ul>
+                  <div class="add-new-step">
+                    <div>
+                      <a href="#">
+                        <i class="fas fa-plus"></i>
+                        <span> اضف خطوة جديده</span>
+                      </a>
+                    </div>
+                  </div>
+                  <img class="str_page_type" src="./assets/images/star-blue.png" alt="">
+                </div>
+              </div>
+              <div class="remember-me">
+                <div class="container">
+                  <ul class="list-unstyled">
+                    <li>
+                      <a href="#" id="agent">
+                        <img src="./assets/images/athlete.png" alt="">
+                        <span>اسم العميل</span>
+                      </a>
+                    </li>
+                    <div class="remember-boxes-agent agent-box">
+                      <h6 class="head-choses">اسم العميل</h6>
+                      <div class="container">
+                        <form action="">
+                          <input type="text" name="" id="" placeholder="ادخل اسم العميل">
+                          <button type="submit">اضافة</button>
+                        </form>
+                      </div>
+                    </div>
+                    <li>
+                      <a href="#" id="phone">
+                        <img src="./assets/images/phone-call.png" alt="">
+                        <span>رقم الهاتف</span>
+                      </a>
+                    </li>
+                    <div class="remember-boxes-agent phone-box">
+                      <h6 class="head-choses">رقم الهاتف</h6>
+                      <div class="container">
+                        <form action="">
+                          <input type="text" name="" id="" placeholder=" ادخل رقم الهاتف">
+                          <button type="submit">اضافة</button>
+                        </form>
+                      </div>
+                    </div>
+                    <li>
+                      <a href="#" id="email">
+                        <img src="./assets/images/envelope.png" alt="">
+                        <span>البريد الالكتروني</span>
+                      </a>
+                    </li>
+                    <div class="remember-boxes-agent email-box">
+                      <h6 class="head-choses">رقم الهاتف</h6>
+                      <div class="container">
+                        <form action="">
+                          <input type="email" name="" id="" placeholder="ادخل البريد الالكتروني">
+                          <button type="submit">اضافة</button>
+                        </form>
+                      </div>
+                    </div>
+                    <li>
+                      <a href="#" id="price">
+                        <img src="./assets/images/price-tag.png" alt="">
+                        <span>سعر المشروع</span>
+                      </a>
+                    </li>
+                    <div class="remember-boxes-agent price-box">
+                      <h6 class="head-choses"> السعر</h6>
+                      <div class="container">
+                        <form action="">
+                          <input type="number" name="" id="" placeholder=" ادخل السعر">
+                          <button type="submit">اضافة</button>
+                        </form>
+                      </div>
+                    </div>
+                    <li>
+                      <a href="#" id="remember-icon">
+                        <img src="./assets/images/bell-blue.png" alt="">
+                        <span>ذكرني</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <img src="./assets/images/calendar-blue.png" alt="">
+                        <span>اضف تاريخ تسليم</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="remember-me-box in-agent-page">
+                <h6 class="head-choses">ذكرني</h6>
+                <div class="container">
+                  <ul class="list-unstyled">
+                    <li>
+                      <a href="#">
+                        <img src="./assets/images/reply-all.png" />
+                        <span>غدا</span>
+                        <span class="date"> السبت, 12/4/2020</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <img src="./assets/images/reply-all.png" />
+                        <span>الاسبوع القادم</span>
+                        <span class="date"> الجمعة, 18/4/2020</span>
+                      </a>
+                    </li>
+                    <li>
+                      <img src="./assets/images/clock.png" />
+                      <input class="filthypillow-1 date-time-input" placeholder="تاريخ ووقت معين">
+                      <img class="arrow-date-time" src="./assets/images/Arrow.png" alt="" srcset="">
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="link-file">
+                <div class="container">
+                  <a href="#">
+                    <img src="./assets/images/link-blue.png" alt="">
+                    <span>اضف ملفات</span>
+                  </a>
+                </div>
+              </div>
+              <div class="add-note">
+                <div class="container">
+                  <textarea name="" id="" cols="30" rows="3" placeholder="اضف ملاحظات"></textarea>
+                </div>
+              </div>
+              <div class="comment">
+                <div class="container">
+                  <div class="single-comment">
+                    <div class="comment-header">
+                      <img src="./assets/images/comment1.jpg">
+                      <div class="content">
+                        <span class="content_name">فراس وليد</span>
+                        <p class="content_slag">المدير العام</p>
+                      </div>
+                      <div class="time">
+                        <i class="fas fa-clock"></i>
+                        <span>منذ 5 ايام</span>
+                      </div>
+                    </div>
+                    <div class="clear"></div>
+                    <p class="comment-p">
+                      السلام عليكم ورحمة الله وبركاته المطلوب التالي
+                      تصميم الرئيسية
+                      تصميم الداخليات
+                    </p>
+                  </div>
+                  <!-- rebeat comment -->
+                  <div class="single-comment">
+                    <div class="comment-header">
+                      <img src="./assets/images/comment2.jpg">
+                      <div class="content">
+                        <span class="content_name">عمر علي</span>
+                        <p class="content_slag">المدير العام</p>
+                      </div>
+                      <div class="time">
+                        <i class="fas fa-clock"></i>
+                        <span>منذ 5 ايام</span>
+                      </div>
+                    </div>
+                    <div class="clear"></div>
+                    <p class="comment-p">
+                      ممتاز جدا ... تمام
+                    </p>
+                  </div>
+                  <div class="add-comment">
+                    <form action="">
+                      <img class="icon-comment" src="./assets/images/comment.png" alt="">
+                      <input type="text" placeholder="اكتب تعليقك هنا">
+                      <button type="submit">اضافه</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <div class="log-out">
+                <a href="#">
+                  <i class="fas fa-sign-out-alt"></i>
+                </a>
+                <a href="#">
+                  <i class="fas fa-trash"></i>
+                </a>
+                <p class="text-center">تم الانشاء : 22/3/2020 م</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- start col-1 right col funun almoslm  -->
+      </div>
+    </div>
+  </div>
+
+
+  <script src="./assets/js/jquery-3.3.1.min.js"></script>
+  <script src="./assets/js/popper.min.js"></script>
+  <script src="./assets/js/bootstrap.min.js"></script>
+  <script src="./assets/js/moment.min.js"></script>
+  <script src="./assets/js/jquery.filthypillow.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment-with-locales.min.js"></script>
+  <script src="./assets/js/main.js"></script>
+  <script src="./assets/js/agent-boxes.js"></script>
+</body>
+
+</html>
