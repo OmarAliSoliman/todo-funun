@@ -42,6 +42,11 @@ $(document).ready(function () {
     $fp.val(dateObj.format("MMM DD YYYY hh:mm A"));
     $fp.filthypillow("hide");
   });
+
+  $('.add-task').niceScroll();
+  $('.tasks').niceScroll();
+  $('.pages').niceScroll();
+
 });
 
 var chosesButton = document.querySelector("#choses");
@@ -114,3 +119,22 @@ function show(Box, state) {
     Box.style.display = "none";
   }
 }
+
+
+// var dtt = document.getElementById('txtbox')
+//   dtt.onfocus = function (event) {
+//       this.type = 'datetime-local';
+//       this.focus();
+//   }
+
+var listTasks = document.querySelectorAll('.list-tasks .edit');
+var addTaskCol = document.querySelector('.add-task-col');
+var pageCol = document.querySelector('.pages');
+console.log(listTasks);
+listTasks.forEach((task, index)=>{
+  task.addEventListener('click', ()=>{
+    addTaskCol.classList.remove('col-lg-9');
+    addTaskCol.classList.add('col-lg-6');
+    pageCol.style.display="block";
+  })
+})
