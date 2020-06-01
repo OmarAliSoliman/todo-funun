@@ -1,10 +1,20 @@
 @import "https://fonts.googleapis.com/css2?family=Tajawal&display=swap";
+@font-face {
+  font-family: myFont;
+  src: url("../fonts/DINNextLTArabic-Regular.ttf"); }
 body {
   direction: rtl;
-  font-family: "Tajawal", sans-serif; }
+  font-family: myFont; }
 
 .clear {
   clear: both; }
+
+.close-box {
+  position: absolute;
+  right: 15px;
+  color: #7387d9;
+  font-size: 13px;
+  cursor: pointer; }
 
 .main .row {
   margin: 0 !important;
@@ -17,7 +27,8 @@ body {
   background-color: #fcfcfe;
   padding-top: 18px;
   height: 100vh;
-  overflow-y: scroll; }
+  overflow-y: scroll;
+  padding-bottom: 50px; }
   .main .tasks .search .head {
     font-size: 15px; }
     .main .tasks .search .head i {
@@ -48,25 +59,35 @@ body {
       position: relative; }
   .main .tasks .search ul {
     margin-top: 10px; }
-    .main .tasks .search ul .task-li img {
+    .main .tasks .search ul .task-li {
+      padding: 5px !important; }
+      .main .tasks .search ul .task-li i {
+        color: #7387d9;
+        margin-left: 5px;
+        font-size: 15px; }
+      .main .tasks .search ul .task-li:hover {
+        background-color: #f6f6f6; }
+      .main .tasks .search ul .task-li .task-number {
+        position: absolute;
+        left: 5%; }
+  .main .tasks .tasks-list ul .list-task-li {
+    padding: 5px !important; }
+    .main .tasks .tasks-list ul .list-task-li i {
+      color: #7387d9;
       margin-left: 5px; }
-    .main .tasks .search ul .task-li:hover {
+    .main .tasks .tasks-list ul .list-task-li img {
+      margin-left: 5px; }
+    .main .tasks .tasks-list ul .list-task-li:hover {
       background-color: #f6f6f6; }
-    .main .tasks .search ul .task-li .task-number {
+    .main .tasks .tasks-list ul .list-task-li .list-task-number {
       position: absolute;
       left: 5%; }
-  .main .tasks .tasks-list ul .list-task-li img {
-    margin-left: 5px; }
-  .main .tasks .tasks-list ul .list-task-li:hover {
-    background-color: #f6f6f6; }
-  .main .tasks .tasks-list ul .list-task-li .list-task-number {
-    position: absolute;
-    left: 5%; }
   .main .tasks .layers {
     margin-top: 20px; }
     .main .tasks .layers ul .rate-li:hover {
       background-color: #f6f6f6; }
-    .main .tasks .layers ul .rate-li img {
+    .main .tasks .layers ul .rate-li i {
+      color: #7387d9;
       margin-left: 5px; }
   .main .tasks .add-list-box {
     position: absolute;
@@ -99,7 +120,8 @@ body {
   padding-top: 18px;
   background-color: #7387d9;
   height: 100vh;
-  overflow-y: scroll; }
+  overflow-y: scroll;
+  padding-bottom: 30px; }
   .main .add-task #choses {
     cursor: pointer; }
   .main .add-task .choses-box {
@@ -186,49 +208,65 @@ body {
   .main .add-task .the-tasks {
     margin-top: 30px;
     padding: 0px 5px; }
-    .main .add-task .the-tasks ul .list-tasks {
-      position: relative;
-      margin-top: 10px;
-      color: #fff; }
-      .main .add-task .the-tasks ul .list-tasks:hover {
-        background-color: #f6f6f6;
-        border-radius: 7px;
-        color: #000; }
-        .main .add-task .the-tasks ul .list-tasks:hover .file-num {
-          color: #000; }
-      .main .add-task .the-tasks ul .list-tasks .task-label {
-        font-size: 14px; }
-      .main .add-task .the-tasks ul .list-tasks p {
-        margin: 0;
-        margin-right: 10px; }
-        .main .add-task .the-tasks ul .list-tasks p .file-num {
-          color: #fff;
-          font-size: 10px;
-          margin-right: 5px; }
-      .main .add-task .the-tasks ul .list-tasks .image-blue-star {
-        position: absolute;
-        top: 25%;
-        left: 5%;
+    .main .add-task .the-tasks ul {
+      margin-bottom: 30px; }
+      .main .add-task .the-tasks ul .list-tasks {
+        position: relative;
         cursor: pointer;
-        font-size: 20px; }
-    .main .add-task .the-tasks .container {
-      display: block;
+        background-color: #f6f6f6 !important;
+        border-radius: 4px;
+        width: 90% !important;
+        margin: auto;
+        margin-top: 4px !important;
+        padding-right: 20px;
+        height: 50px !important; }
+        .main .add-task .the-tasks ul .list-tasks .file-num {
+          color: #000 !important; }
+        .main .add-task .the-tasks ul .list-tasks:hover {
+          background-color: rgba(229, 229, 243, 0.5) !important;
+          border-radius: 7px;
+          color: #fff; }
+          .main .add-task .the-tasks ul .list-tasks:hover .file-num {
+            color: #000; }
+        .main .add-task .the-tasks ul .list-tasks .task-label {
+          font-size: 14px; }
+        .main .add-task .the-tasks ul .list-tasks p {
+          margin: 0;
+          margin-right: 20px;
+          display: inline;
+          position: absolute;
+          width: 100%;
+          top: 20px !important;
+          left: -35px; }
+          .main .add-task .the-tasks ul .list-tasks p img {
+            width: 10px; }
+          .main .add-task .the-tasks ul .list-tasks p .file-num {
+            color: #fff;
+            font-size: 10px;
+            margin-right: 5px; }
+        .main .add-task .the-tasks ul .list-tasks .image-blue-star {
+          position: absolute;
+          top: 35%;
+          color: #858585;
+          left: 5%;
+          cursor: pointer;
+          font-size: 15px; }
+    .main .add-task .the-tasks .continer-cheack {
+      display: inline;
       position: relative;
-      padding-left: 35px;
-      margin-bottom: 12px;
       cursor: pointer;
       font-size: 22px;
       -webkit-user-select: none;
       -moz-user-select: none;
       -ms-user-select: none;
       user-select: none; }
-      .main .add-task .the-tasks .container input {
+      .main .add-task .the-tasks .continer-cheack input {
         position: absolute;
         opacity: 0;
         cursor: pointer;
         height: 0;
         width: 0; }
-      .main .add-task .the-tasks .container .checkmark {
+      .main .add-task .the-tasks .continer-cheack .checkmark {
         position: absolute;
         top: 0;
         right: 0;
@@ -236,23 +274,25 @@ body {
         margin-top: 6px;
         width: 25px;
         border-radius: 50%;
-        background-color: #eee; }
-        .main .add-task .the-tasks .container .checkmark::after {
+        background-color: transparent;
+        border: 2px solid #555; }
+        .main .add-task .the-tasks .continer-cheack .checkmark::after {
           content: "";
           position: absolute;
           display: none; }
-      .main .add-task .the-tasks .container .task-label {
+      .main .add-task .the-tasks .continer-cheack .task-label {
         margin-right: 20px; }
-    .main .add-task .the-tasks .container:hover input ~ .checkmark {
+    .main .add-task .the-tasks .continer-cheack:hover input ~ .checkmark {
       background-color: #ccc; }
-    .main .add-task .the-tasks .container input:checked ~ .checkmark {
-      background-color: #2196f3; }
-    .main .add-task .the-tasks .container input:checked ~ .checkmark:after {
+    .main .add-task .the-tasks .continer-cheack input:checked ~ .checkmark {
+      background-color: #2196f3;
+      border: 2px solid #2196f3; }
+    .main .add-task .the-tasks .continer-cheack input:checked ~ .checkmark:after {
       display: block; }
-    .main .add-task .the-tasks .container .checkmark:after {
-      left: 9px;
+    .main .add-task .the-tasks .continer-cheack .checkmark:after {
+      right: 6px;
       top: 5px;
-      width: 5px;
+      width: 4px;
       height: 10px;
       border: solid white;
       border-width: 0 3px 3px 0;
@@ -263,10 +303,47 @@ body {
       text-decoration: line-through; }
     .main .add-task .the-tasks .list-end-task {
       border-bottom: 1px solid #d9d9d9; }
-    .main .add-task .the-tasks .container .checkmark:after {
-      top: 4px !important;
+    .main .add-task .the-tasks .continer-cheack .checkmark:after {
+      top: 2px !important;
       width: 8px !important;
       height: 14px !important; }
+    .main .add-task .the-tasks .compleate-tasks {
+      border: 1px solid #000 #7387d9 !important;
+      display: inline-block;
+      background-color: rgba(15, 17, 24, 0.1) !important;
+      box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+      color: #fff;
+      border-radius: 5px;
+      padding: 7px;
+      cursor: pointer; }
+      .main .add-task .the-tasks .compleate-tasks:hover {
+        background-color: rgba(15, 17, 24, 0.4) !important; }
+      .main .add-task .the-tasks .compleate-tasks i {
+        font-size: 11px;
+        margin-left: 5px;
+        color: #fff; }
+  .main .add-task .add-a-new-task-input {
+    position: relative;
+    bottom: 0px;
+    margin-top: 30px;
+    width: 90%;
+    right: 49px; }
+    .main .add-task .add-a-new-task-input form .fa-plus-input {
+      position: absolute;
+      bottom: 16px;
+      right: 23px;
+      color: #fff; }
+    .main .add-task .add-a-new-task-input form .input-task-new {
+      width: 100%;
+      background-color: rgba(15, 17, 24, 0.1) !important;
+      border: 0;
+      padding: 15px;
+      padding-right: 30px !important;
+      color: #fff; }
+      .main .add-task .add-a-new-task-input form .input-task-new::placeholder {
+        color: #fff; }
+      .main .add-task .add-a-new-task-input form .input-task-new:focus {
+        outline: 0 !important; }
 .main .pages {
   background-color: #fcfcfe;
   padding-top: 10px;
@@ -274,17 +351,32 @@ body {
   overflow-y: scroll;
   display: none;
   transition: all .5s ease-in-out; }
+  .main .pages .arrow-close-page {
+    color: #fff;
+    cursor: pointer;
+    border: 1px solid #7387d9;
+    background-color: #7387d9;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    font-size: 12px;
+    margin-bottom: 10px;
+    border-radius: 2px; }
   .main .pages .page-type {
-    position: relative; }
+    position: relative;
+    border: 1px solid #fff !important;
+    border-bottom: 1px solid #f7f8fd !important; }
     .main .pages .page-type ul {
       margin-top: 20px; }
     .main .pages .page-type .str_page_type {
       position: absolute;
-      top: 10%;
+      color: #7387d9;
+      top: 5%;
       left: 5%; }
     .main .pages .page-type .li_for_page_type {
       position: relative;
-      border-bottom: 1px solid #d9d9d9;
+      border-bottom: 1px solid #f7f8fd;
       margin-top: 10px; }
       .main .pages .page-type .li_for_page_type .fa-times {
         position: absolute;
@@ -351,7 +443,7 @@ body {
     padding-bottom: 0 !important; }
     .main .pages .remember-me ul li {
       margin-top: 10px;
-      border-bottom: 1px solid #d9d9d9;
+      border-bottom: 1px solid #f7f8fd;
       padding-bottom: 10px; }
       .main .pages .remember-me ul li a {
         text-decoration: none; }
@@ -373,7 +465,7 @@ body {
     z-index: 999; }
     .main .pages .remember-me-box ul li {
       margin-top: 10px;
-      border-bottom: 1px solid #f1f3fb;
+      border-bottom: 1px solid #f7f8fd;
       padding-bottom: 10px; }
       .main .pages .remember-me-box ul li a {
         color: #000;
@@ -496,8 +588,11 @@ body {
           height: 35px;
           border: 0;
           border-radius: 10px;
-          color: #fff;
+          color: #000;
+          font-size: 12px;
           padding-right: 35px; }
+          .main .pages .comment .add-comment form input:focus {
+            outline: 0 !important; }
         .main .pages .comment .add-comment form button[type="submit"] {
           position: absolute;
           left: 7%;
@@ -505,6 +600,8 @@ body {
           border: 0;
           top: 8%;
           color: #7387d9; }
+          .main .pages .comment .add-comment form button[type="submit"]:focus {
+            outline: 0 !important; }
   .main .pages .log-out {
     margin-top: 20px;
     position: relative; }
@@ -549,7 +646,6 @@ body {
 .main .tasks .add-list-box, .main .pages .page-type, .main .pages .remember-me, .main .pages .remember-me-box, .main .pages .remember-boxes-agent, .main .pages .link-file, .main .pages .add-note, .main .pages .comment {
   border: 1px solid #e8e8e8;
   background-color: #fff;
-  border-radius: 10px;
   padding-top: 10px;
   padding-bottom: 15px; }
 

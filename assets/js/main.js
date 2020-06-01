@@ -34,19 +34,18 @@ $(document).ready(function () {
       "font-size: 15px; font-family: 'Tajawal', sans-serif;";
     fbCalender.style.cssText =
       "font-size: 15px; font-family: 'Tajawal', sans-serif;";
-      $(fbClock).on('click', function(){
-        $(this).focus();
-      })
+    $(fbClock).on("click", function () {
+      $(this).focus();
+    });
   });
   $fp.on("fp:save", function (e, dateObj) {
     $fp.val(dateObj.format("MMM DD YYYY hh:mm A"));
     $fp.filthypillow("hide");
   });
 
-  $('.add-task').niceScroll();
-  $('.tasks').niceScroll();
-  $('.pages').niceScroll();
-
+  $(".add-task").niceScroll();
+  $(".tasks").niceScroll();
+  $(".pages").niceScroll();
 });
 
 var chosesButton = document.querySelector("#choses");
@@ -81,36 +80,8 @@ var openRememberBox = false;
 rememberIcon.addEventListener("click", function (e) {
   e.preventDefault();
   show(rememberBox, openRememberBox);
-  openRememberBox = !openRememberBox;
 });
 
-// var openAgentBox = false;
-// agentIcon.addEventListener("click", function (e) {
-//   e.preventDefault();
-//   show(agentBox, openAgentBox);
-//   openAgentBox = !openAgentBox;
-// });
-
-// var openPhoneBox = false;
-// phoneIcon.addEventListener("click", function (e) {
-//   e.preventDefault();
-//   show(phoneBox, openPhoneBox);
-//   openPhoneBox = !openPhoneBox;
-// });
-
-// var openEmailBox = false;
-// emailIcon.addEventListener("click", function (e) {
-//   e.preventDefault();
-//   show(emailBox, openEmailBox);
-//   openEmailBox = !openEmailBox;
-// });
-
-// var openPriceBox = false;
-// priceIcon.addEventListener("click", function (e) {
-//   e.preventDefault();
-//   show(priceBox, openPriceBox);
-//   openPriceBox = !openPriceBox;
-// });
 
 function show(Box, state) {
   if (!state) {
@@ -121,20 +92,67 @@ function show(Box, state) {
 }
 
 
-// var dtt = document.getElementById('txtbox')
-//   dtt.onfocus = function (event) {
-//       this.type = 'datetime-local';
-//       this.focus();
-//   }
-
-var listTasks = document.querySelectorAll('.list-tasks .edit');
-var addTaskCol = document.querySelector('.add-task-col');
-var pageCol = document.querySelector('.pages');
-console.log(listTasks);
-listTasks.forEach((task, index)=>{
-  task.addEventListener('click', ()=>{
-    addTaskCol.classList.remove('col-lg-9');
-    addTaskCol.classList.add('col-lg-6');
-    pageCol.style.display="block";
-  })
+var closeItemBox = document.querySelector('.close-box');
+closeItemBox.addEventListener('click', ()=>{
+  rememberBox.style.display= "none";
 })
+
+
+var openTaskPage = false;
+var listTasks = document.querySelectorAll(".list-tasks");
+var addTaskCol = document.querySelector(".add-task-col");
+var pageCol = document.querySelector(".pages");
+console.log(listTasks);
+listTasks.forEach((task, index) => {
+  task.addEventListener("click", () => {
+    if (!openTaskPage) {
+      addTaskCol.classList.remove("col-lg-9");
+      addTaskCol.classList.add("col-lg-6");
+      pageCol.style.display = "block";
+    } 
+    // else {
+    //   addTaskCol.classList.remove("col-lg-6");
+    //   addTaskCol.classList.add("col-lg-9");
+    //   pageCol.style.display = "none";
+    // }
+    // openTaskPage = !openTaskPage;
+  });
+});
+
+var starColor = false;
+var faStar = document.querySelectorAll(".list-tasks .fa-star");
+faStar.forEach((star, index) => {
+  star.addEventListener("click", () => {
+    if (!starColor) {
+      star.style.color = "blue";
+    } else {
+      star.style.color = "#858585";
+    }
+    starColor = !starColor;
+  });
+});
+
+var completeBox = document.querySelector(".compleate-tasks");
+var completeTasksUl = document.querySelector(".complete-ul-tasks");
+var completeChevron = document.querySelector(".complete-chevron");
+
+completBoxOpen = false;
+completeBox.addEventListener("click", () => {
+  if (!completBoxOpen) {
+    completeTasksUl.style.display = "none";
+    completeChevron.classList.remove("fa-chevron-down");
+    completeChevron.classList.add("fa-chevron-up");
+  } else {
+    completeTasksUl.style.display = "block";
+    completeChevron.classList.add("fa-chevron-down");
+    completeChevron.classList.remove("fa-chevron-up");
+  }
+  completBoxOpen = !completBoxOpen;
+});
+
+var arrowClosePage = document.querySelector(".arrow-close-page");
+arrowClosePage.addEventListener("click", () => {
+  addTaskCol.classList.remove("col-lg-6");
+  addTaskCol.classList.add("col-lg-9");
+  pageCol.style.display = "none";
+});

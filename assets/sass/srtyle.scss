@@ -1,5 +1,10 @@
 @import "https://fonts.googleapis.com/css2?family=Tajawal&display=swap";
 
+@font-face {
+  font-family: myFont;
+  src: url("../fonts/DINNextLTArabic-Regular.ttf");
+}
+
 $mainColor: #7387d9;
 $buttonColor1: #e5233d;
 $buttonColor2: #69bc2a;
@@ -7,10 +12,18 @@ $mainFont: 'Tajawal', sans-serif;
 
 body {
   direction: rtl;
-  font-family: $mainFont;
+  font-family: myFont;
 }
 .clear {
   clear: both;
+}
+
+.close-box{
+  position: absolute;
+  right: 15px;
+  color: $mainColor;
+  font-size: 13px;
+  cursor: pointer;
 }
 
 // start main
@@ -29,6 +42,7 @@ body {
     padding-top: 18px;
     height: 100vh;
     overflow-y: scroll;
+    padding-bottom: 50px;
     .search {
       .head {
         font-size: 15px;
@@ -70,9 +84,15 @@ body {
         margin-top: 10px;
         .task-li {
           @extend %li-for-tasks;
-          img {
+          padding: 5px !important;
+          i{
+            color: $mainColor;
             margin-left: 5px;
+            font-size: 15px;
           }
+          // img {
+          //   margin-left: 5px;
+          // }
           &:hover {
             background-color: #f6f6f6;
           }
@@ -90,6 +110,12 @@ body {
       ul {
         .list-task-li {
           @extend %li-for-tasks;
+          padding: 5px !important;
+          i{
+            color: $mainColor;
+            margin-left: 5px;
+            // letter-spacing: 10px;
+          }
           img {
             margin-left: 5px;
           }
@@ -121,9 +147,13 @@ body {
           &:hover {
             background-color: #f6f6f6;
           }
-          img {
+          i{
+            color: $mainColor;
             margin-left: 5px;
           }
+          // img {
+          //   margin-left: 5px;
+          // }
         }
       }
       .add-new-rate {
@@ -179,6 +209,7 @@ body {
     background-color: $mainColor;
     height: 100vh;
     overflow-y: scroll;
+    padding-bottom: 30px;
     #choses {
       cursor: pointer;
     }
@@ -299,14 +330,26 @@ body {
       margin-top: 30px;
       padding: 0px 5px;
       ul {
+        margin-bottom: 30px;
         .list-tasks {
           position: relative;
-          margin-top: 10px;
-          color: #fff;
+          cursor: pointer;
+          // color: #fff;
+          background-color: #f6f6f6 !important;
+          border-radius: 4px;
+          width: 90% !important;
+          margin: auto;
+          margin-top: 4px !important;
+          padding-right: 20px;
+          height: 50px !important;
+          .file-num{
+            color: #000 !important;
+          }
           &:hover {
-            background-color: #f6f6f6;
+            // background-color: #f6f6f6;
+            background-color: rgba(229, 229, 243, 0.5) !important;
             border-radius: 7px;
-            color: #000;
+            color: #fff;
             .file-num {
               color: #000;
             }
@@ -316,7 +359,15 @@ body {
           }
           p {
             margin: 0;
-            margin-right: 10px;
+            margin-right: 20px;
+            display: inline;
+            position: absolute;
+            width: 100%;
+            top: 20px !important;
+            left: -35px ;
+            img{
+              width: 10px;
+            }
             .file-num {
               color: #fff;
               font-size: 10px;
@@ -325,20 +376,21 @@ body {
           }
           .image-blue-star {
             position: absolute;
-            top: 25%;
+            top: 35%;
             // color: $mainColor;
+            color: #858585;
             left: 5%;
             cursor: pointer;
-            font-size: 20px;
+            font-size: 15px;
           }
         }
       }
 
-      .container {
-        display: block;
+      .continer-cheack {
+        display: inline;
         position: relative;
-        padding-left: 35px;
-        margin-bottom: 12px;
+        // padding-left: 35px;
+        // margin-bottom: 12px;
         cursor: pointer;
         font-size: 22px;
         -webkit-user-select: none;
@@ -360,7 +412,8 @@ body {
           margin-top: 6px;
           width: 25px;
           border-radius: 50%;
-          background-color: #eee;
+          background-color: transparent;
+          border: 2px solid #555;
           &::after {
             content: "";
             position: absolute;
@@ -371,19 +424,20 @@ body {
           margin-right: 20px;
         }
       }
-      .container:hover input ~ .checkmark {
+      .continer-cheack:hover input ~ .checkmark {
         background-color: #ccc;
       }
-      .container input:checked ~ .checkmark {
+      .continer-cheack input:checked ~ .checkmark {
         background-color: #2196f3;
+        border: 2px solid #2196f3;
       }
-      .container input:checked ~ .checkmark:after {
+      .continer-cheack input:checked ~ .checkmark:after {
         display: block;
       }
-      .container .checkmark:after {
-        left: 9px;
+      .continer-cheack .checkmark:after {
+        right: 6px;
         top: 5px;
-        width: 5px;
+        width: 4px;
         height: 10px;
         border: solid white;
         border-width: 0 3px 3px 0;
@@ -397,10 +451,57 @@ body {
       .list-end-task {
         border-bottom: 1px solid #d9d9d9;
       }
-      .container .checkmark:after{
-        top: 4px !important;
+      .continer-cheack .checkmark:after{
+        top: 2px !important;
         width: 8px !important;
         height: 14px !important;
+      }
+      .compleate-tasks{
+        border: 1px solid #000 $mainColor !important;
+        display: inline-block;
+        background-color: rgba(15, 17, 24, 0.1) !important;
+        box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+        color: #fff;
+        border-radius: 5px;
+        padding: 7px;
+        cursor: pointer;
+        &:hover{
+          background-color: rgba(15, 17, 24, 0.4) !important;
+        }
+        i{
+          font-size: 11px;
+          margin-left: 5px;
+          color: #fff;
+        }
+      }
+    }
+    .add-a-new-task-input{
+      position: relative;
+      bottom: 0px;
+      margin-top: 30px;
+      width: 90%;
+      right: 49px;
+      form{
+        .fa-plus-input{
+          position: absolute;
+          bottom: 16px;
+          right: 23px;
+          color: #fff;
+        }
+        .input-task-new{
+          width: 100%;
+          background-color: rgba(15, 17, 24, 0.1) !important;
+          border: 0;
+          padding: 15px;
+          padding-right: 30px !important;
+          color: #fff;
+          &::placeholder{
+            color: #fff;
+          }
+          &:focus{
+            outline: 0 !important;
+          }
+        }
       }
     }
   }
@@ -413,20 +514,36 @@ body {
     overflow-y: scroll;
     display: none;
     transition: all .5s ease-in-out;
+    .arrow-close-page{
+      color: #fff;
+      cursor: pointer;
+      border: 1px solid $mainColor;
+      background-color: $mainColor;
+      width: 20px;
+      height: 20px;
+      line-height: 20px;
+      text-align: center;
+      font-size: 12px;
+      margin-bottom: 10px;
+      border-radius: 2px;
+    }
     .page-type {
       @extend %box-page;
       position: relative;
+      border: 1px solid #fff !important;
+      border-bottom: 1px solid #f7f8fd !important;
       ul {
         margin-top: 20px;
       }
       .str_page_type {
         position: absolute;
-        top: 10%;
+        color: $mainColor;
+        top: 5%;
         left: 5%;
       }
       .li_for_page_type {
         position: relative;
-        border-bottom: 1px solid #d9d9d9;
+        border-bottom: 1px solid #f7f8fd;
         margin-top: 10px;
         .fa-times {
           position: absolute;
@@ -516,7 +633,7 @@ body {
       ul {
         li {
           margin-top: 10px;
-          border-bottom: 1px solid #d9d9d9;
+          border-bottom: 1px solid #f7f8fd;
           padding-bottom: 10px;
           a {
             text-decoration: none;
@@ -553,7 +670,7 @@ body {
       ul{
         li{
           margin-top: 10px;
-          border-bottom: 1px solid #f1f3fb;
+          border-bottom: 1px solid #f7f8fd;
           padding-bottom: 10px;
           a{
             color: #000;
@@ -729,8 +846,12 @@ body {
             height: 35px;
             border: 0;
             border-radius: 10px;
-            color: #fff;
+            color: #000;
+            font-size: 12px;
             padding-right: 35px;
+            &:focus{
+              outline: 0 !important;
+            }
           }
           button[type="submit"] {
             position: absolute;
@@ -739,6 +860,9 @@ body {
             border: 0;
             top: 8%;
             color: $mainColor;
+            &:focus{
+              outline: 0 !important;
+            }
           }
         }
       }
@@ -796,7 +920,7 @@ body {
 %box-page {
   border: 1px solid #e8e8e8;
   background-color: #fff;
-  border-radius: 10px;
+  // border-radius: 10px;
   padding-top: 10px;
   padding-bottom: 15px;
 }
